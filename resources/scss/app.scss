@@ -58,6 +58,51 @@ main {
         text-transform: uppercase;
         transform: translateY(-50%);
     }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+
+        .form-group {
+            margin-bottom: 20px;
+
+            label {
+                color: $light;
+            }
+
+            input,
+            textarea {
+                background-color: transparent;
+                border: 2px solid $light;
+                color: $light;
+                padding: 10px;
+                width: 100%;
+                transition: border-color 0.3s ease;
+
+                &:focus {
+                    outline: none;
+                    border-color: $text-hover;
+                }
+            }
+
+            textarea {
+                min-height: 100px;
+            }
+        }
+
+        button[type="submit"] {
+            background-color: $text-hover;
+            color: $light;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken($text-hover, 10%);
+            }
+        }
+    }
 }
 
 .row {
@@ -233,3 +278,4 @@ main {
     }
     
 }
+

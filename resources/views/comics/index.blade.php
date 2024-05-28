@@ -19,6 +19,9 @@
                             <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="details-link">
                                 <i class="fas fa-info-circle"></i>
                             </a>
+                            <a href="{{ route('comics.update', ['comic' => $comic->id]) }}" class="update-link">
+                                <i class="fas fa-pencil-alt"></i>
+                            </a>
                         </div>
                         
                     </div>

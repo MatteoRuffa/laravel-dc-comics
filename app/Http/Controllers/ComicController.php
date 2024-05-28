@@ -72,7 +72,13 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        $dccomics = Config::get('db_comics.dccomics');
+        $navbarFooter = Config::get('db_comics.navbarFooter');
+        $navigation = Config::get('db_comics.navigation');
+
+        $comics = Comic::all();
+
+        return view('comics.update',  compact('dccomics', 'navbarFooter', 'navigation', 'comic')); 
     }
 
     /**
@@ -84,7 +90,9 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $comic->update($request->all());
+
+        return redirect()->route('comics.show', ['comic' => $comic->id])->with('success', 'Comic updated successfully');
     }
 
     /**
