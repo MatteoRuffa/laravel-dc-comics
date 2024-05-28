@@ -21,7 +21,5 @@ use App\Http\Controllers\ComicController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
+Route::resource('comics', ComicController::class);
 Route::get('/comics', [ComicController::class, 'index'])->name('comics');
-Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
-Route::get('/comics/{comic}/update', [ComicController::class, 'edit'])->name('comics.update');
-Route::put('/comics/{comic}', [ComicController::class, 'update'])->name('comics.save');

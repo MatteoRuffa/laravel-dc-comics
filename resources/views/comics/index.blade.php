@@ -29,7 +29,7 @@
                 </div>
             @endforeach
         </div>
-        <div class="btn-load-more text-center"><a href="#">load more</a></div>
+        <div class="btn-load-more text-center"><a href="{{ route('comics.create') }}">Add a comic</a></div>
     </div>
 </main>
 @endsection
