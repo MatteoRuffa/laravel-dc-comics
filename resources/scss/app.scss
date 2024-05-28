@@ -85,6 +85,21 @@ main {
             font-weight: 700;
             font-size: 2rem;
             display: none;
+
+            a {
+                text-decoration: none;
+                color: $light;
+                font-weight: 700;
+                font-size: 3rem;
+
+                &:hover {
+                    color: $text-hover;
+                }
+
+                i {
+                    padding-top: 60px;
+                }
+            }
         }
     }
 

@@ -54,7 +54,14 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        return view('comics.show', compact('comic'));
+        
+    $dccomics = Config::get('db_comics.dccomics');
+    $navbarFooter = Config::get('db_comics.navbarFooter');
+    $navigation = Config::get('db_comics.navigation');
+
+    $comics = Comic::all();
+
+    return view('comics.show',  compact('dccomics', 'navbarFooter', 'navigation', 'comic')); 
     }
 
     /**

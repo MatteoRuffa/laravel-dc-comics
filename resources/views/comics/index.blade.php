@@ -14,7 +14,13 @@
                          onmouseover="this.querySelector('.price').style.display='block'" 
                          onmouseout="this.querySelector('.price').style.display='none'">
                         <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
-                        <span class="price">{{ $comic['price'] }}</span>
+                        <div class="price">
+                            {{ $comic['price'] }}
+                            <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="details-link">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+                        </div>
+                        
                     </div>
                     <h5>{{ $comic['series'] }}</h5>
                 </div>

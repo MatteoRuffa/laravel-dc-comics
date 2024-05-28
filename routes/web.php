@@ -22,3 +22,4 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('/comics', [ComicController::class, 'index'])->name('comics');
+Route::get('/comics/{comic}', [ComicController::class, 'show'])->name('comics.show');
