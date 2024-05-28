@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Config;
 
 class ComicController extends Controller
 {
@@ -14,7 +16,13 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $dccomics = Config::get('db_comics.dccomics');
+        $navbarFooter = Config::get('db_comics.navbarFooter');
+        $navigation = Config::get('db_comics.navigation');
+
+        $comics = Comic::all();
+
+        return View::make('comics.index', compact('dccomics', 'navbarFooter', 'navigation', 'comics')); // Modificato 'view' in 'View'
     }
 
     /**
@@ -46,7 +54,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        return view('comics.show', compact('comic'));
     }
 
     /**

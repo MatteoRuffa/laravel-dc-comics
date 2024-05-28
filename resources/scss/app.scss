@@ -36,6 +36,13 @@ header {
 }
 main {
     background-color: $dark;
+    .carousel-item {
+        img {
+            max-width: 500px;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
 
     .jumbotron {
         background-image: url('/resources/img/jumbotron.jpg');

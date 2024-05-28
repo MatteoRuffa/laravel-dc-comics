@@ -1,6 +1,11 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ComicController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,17 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $dccomics = config('db_comics.dccomics');
-    $comics = config('db_comics.infocomics');
-    $navbarFooter = config('db_comics.navbarFooter');
-    $navigation = config('db_comics.navigation');
-    return view('home', compact('dccomics', 'comics', 'navbarFooter', 'navigation'));
-})->name('home');
-Route::get('/about', function () {
-    $dccomics = config('db_comics.dccomics');
-    $comics = config('db_comics.infocomics');
-    $navbarFooter = config('db_comics.navbarFooter');
-    $navigation = config('db_comics.navigation');
-    return view('About', compact('dccomics', 'comics', 'navbarFooter', 'navigation'));
-})->name('about');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+Route::get('/comics', [ComicController::class, 'index'])->name('comics');

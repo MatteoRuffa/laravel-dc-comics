@@ -4,43 +4,43 @@ return [
     'dccomics' => [
         [
             'name' => 'Characters',
-            'link' => '#'
+            'link' => '/characters'
         ],
         [
             'name' => 'Comics',
-            'link' => '#'
+            'link' => '/comics'
         ],
         [
             'name' => 'Movies',
-            'link' => '#'
+            'link' => '/movies'
         ],
         [
             'name' => 'TV',
-            'link' => '#'
+            'link' => '/tv'
         ],
         [
             'name' => 'Games',
-            'link' => '#'
+            'link' => '/games'
         ],
         [
             'name' => 'Collectibles',
-            'link' => '#'
+            'link' => '/collectibles'
         ],
         [
             'name' => 'Videos',
-            'link' => '#'
+            'link' => '/videos'
         ],
         [
             'name' => 'Fans',
-            'link' => '#'
+            'link' => '/fans'
         ],
         [
             'name' => 'News',
-            'link' => '#'
+            'link' => '/news'
         ],
         [
             'name' => 'Shop',
-            'link' => '#'
+            'link' => '/shop'
         ]
     ] ,
     'navbarFooter' => [

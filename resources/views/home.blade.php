@@ -4,23 +4,27 @@
 
 @section('content')
 <main>
-    <div class="jumbotron"></div>
-    <div class="container">
-        <h3 class="title">current series</h3>
-        <div class="row">
-            @foreach($comics as $comic)
-                <div class="col-12 col-md-4 col-lg-2">
-                    <div class="image" 
-                         onmouseover="this.querySelector('.price').style.display='block'" 
-                         onmouseout="this.querySelector('.price').style.display='none'">
-                        <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
-                        <span class="price">{{ $comic['price'] }}</span>
-                    </div>
-                    <h5>{{ $comic['series'] }}</h5>
+<div class="jumbotron"></div>
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @foreach($comics as $key => $comic)
+                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                    <img src="{{ $comic['thumb'] }}" class="d-block w-100" alt="{{ $comic['series'] }}">
                 </div>
             @endforeach
         </div>
-        <div class="btn-load-more text-center"><a href="#">load more</a></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+    
+   
+    
+    
 </main>
 @endsection
