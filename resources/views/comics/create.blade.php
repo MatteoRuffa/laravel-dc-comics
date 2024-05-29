@@ -5,8 +5,8 @@
 @section('content')
 <main>
     <div class="container">
-        <h2>Create New Comic</h2>
-        <form action="{{ route('comics.store') }}" method="POST">
+        <h2 class="py-5 text-white">Create New Comic</h2>
+        <form action="{{ route('comics.store') }}" method="POST" class="py-5">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>

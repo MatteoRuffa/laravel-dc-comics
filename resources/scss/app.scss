@@ -63,18 +63,15 @@ main {
         max-width: 600px;
         margin: 0 auto;
 
-        .form-group {
-            margin-bottom: 20px;
-
             label {
                 color: $light!important;
             }
 
             input,
             textarea {
-                background-color: transparent;
-                border: 2px solid $light;
-                color: $light!important;
+                background-color: $light; // Changed to light for white background
+                border: 2px solid $dark; // Changed to dark for clear border
+                color: $dark!important;
                 padding: 10px;
                 width: 100%;
                 transition: border-color 0.3s ease;
@@ -88,6 +85,8 @@ main {
             textarea {
                 min-height: 100px;
             }
+        .form-group {
+            margin-bottom: 20px;
         }
 
         button[type="submit"] {
@@ -112,7 +111,7 @@ main {
         transition: opacity 0.3s ease;
         &:hover {
             opacity: 0.3;
-            cursor: pointer;
+            cursor: ointer;
         }
 
         img {

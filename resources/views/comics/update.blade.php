@@ -4,7 +4,7 @@
 
 @section('content')
 <main>
-    <form action="{{ route('comics.save', ['comic' => $comic->id]) }}" method="POST">
+    <form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST" class="py-5">
         @csrf
         @method('PUT')
 

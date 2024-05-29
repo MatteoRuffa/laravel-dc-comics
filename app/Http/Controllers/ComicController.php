@@ -33,8 +33,6 @@ class ComicController extends Controller
 
     public function store(Request $request)
     {
-        // Aggiungi la logica di validazione dei dati qui
-        // E salva i dati nel database
         $form_data = $request->all();
         $new_comic = Comic::create($form_data);
         return redirect()->route('comics.index')->with('message', "New comic created");
@@ -54,7 +52,7 @@ class ComicController extends Controller
     {
         $comic->update($request->all());
 
-        return redirect()->route('comics.show', ['comic' => $comic->id])->with('success', 'Comic updated successfully');
+        return redirect()->route('comics.update', ['comic' => $comic->id])->with('success', 'Comic updated successfully');
     }
 
     public function destroy(Comic $comic)
