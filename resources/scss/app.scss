@@ -59,6 +59,39 @@ main {
         transform: translateY(-50%);
     }
 
+    .show {
+        color: $light!important;
+
+        img {
+            width: 300px;
+            height: auto;
+        }
+
+        button.btn.btn-danger.btn-sm {
+            border: none;
+            background: none;
+            padding: 0;
+            i.fa-solid.fa-trash {
+                background: none;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+        i {
+            font-size: 2rem;
+        }
+        .d-inline:hover {
+            transform: scale(1.5);
+        }
+        .update-link:hover {
+            transform: scale(1.5);
+        }
+    }
+
+    
+
     form {
         max-width: 600px;
         margin: 0 auto;
