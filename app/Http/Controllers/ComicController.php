@@ -6,6 +6,7 @@ use App\Models\Comic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Contracts\View\Factory;
+use App\Http\Requests\StoreComicRequest;
 
 class ComicController extends Controller
 {
@@ -31,9 +32,9 @@ class ComicController extends Controller
         return view('comics.create', $this->commonData);
     }
 
-    public function store(Request $request)
+    public function store(StoreComicRequest $request)
     {
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $new_comic = Comic::create($form_data);
         return redirect()->route('comics.index')->with('message', "New comic created");
     }
@@ -45,7 +46,7 @@ class ComicController extends Controller
 
     public function edit(Comic $comic)
     {
-        return view('comics.update', array_merge($this->commonData, ['comic' => $comic]));
+        return view('comics.edit', array_merge($this->commonData, ['comic' => $comic]));
     }
 
     public function update(Request $request, Comic $comic)
