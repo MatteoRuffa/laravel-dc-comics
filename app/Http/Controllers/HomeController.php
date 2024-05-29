@@ -13,10 +13,11 @@ class HomeController extends Controller
     $dccomics = Config::get('db_comics.dccomics');
     $navbarFooter = Config::get('db_comics.navbarFooter');
     $navigation = Config::get('db_comics.navigation');
+    $imgcomics = Config::get('db_comics.imgcomics');
 
     $comics = Comic::all();
 
-    return view('home', compact('dccomics', 'navbarFooter', 'navigation', 'comics'));
+    return view('home', compact('dccomics', 'navbarFooter', 'navigation', 'imgcomics', 'comics'));
 }
 
 

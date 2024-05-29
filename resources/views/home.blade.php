@@ -7,9 +7,9 @@
 <div class="jumbotron"></div>
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            @foreach($comics as $key => $comic)
+            @foreach($imgcomics as $key => $imgcomic)
                 <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-                    <img src="{{ $comic['thumb'] }}" class="d-block w-100" alt="{{ $comic['series'] }}">
+                    <img src="{{ $imgcomic['thumb'] }}" class="d-block w-100" alt="{{ $imgcomic['series'] }}">
                 </div>
             @endforeach
         </div>

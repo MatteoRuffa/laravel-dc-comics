@@ -35,6 +35,9 @@ class ComicController extends Controller
     {
         // Aggiungi la logica di validazione dei dati qui
         // E salva i dati nel database
+        $form_data = $request->all();
+        $new_comic = Comic::create($form_data);
+        return redirect()->route('comics.index')->with('message', "New comic created");
     }
 
     public function show(Comic $comic)

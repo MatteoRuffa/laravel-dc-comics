@@ -11,11 +11,10 @@
             @foreach($comics as $comic)
                 <div class="col-12 col-md-4 col-lg-2">
                     <div class="image" 
-                         onmouseover="this.querySelector('.price').style.display='block'" 
+                         onmouseover="this.querySelector('.price').style.display='flex'" 
                          onmouseout="this.querySelector('.price').style.display='none'">
                         <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
-                        <div class="price">
-                            {{ $comic['price'] }}
+                        <div class="price ">
                             <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="details-link">
                                 <i class="fas fa-info-circle"></i>
                             </a>

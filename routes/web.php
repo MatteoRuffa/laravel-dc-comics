@@ -22,4 +22,3 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::resource('comics', ComicController::class);
-Route::get('/comics', [ComicController::class, 'index'])->name('comics');

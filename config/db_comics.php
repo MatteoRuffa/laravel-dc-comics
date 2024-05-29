@@ -195,5 +195,31 @@ return [
             ['name' => 'DC Power Visa', 'link' => '#']
         ]
     ],
+    'imgcomics' => [ 
+        [
+            'thumb' => 'https://cdn.shopify.com/s/files/1/1267/8217/products/Action_Comics_1000_DC_Universe_Miles_Morales_Spider-Man_Jamal_Campbell_Variant_Cover_grande.jpg?v=1571439703',
+            'series' => 'Action Comics #1000'
+        ],
+        [
+            'thumb' => 'https://cdn.shopify.com/s/files/1/1267/8217/products/DETECTIVE_COMICS_1000_JOKER_ACE_OF_KNUCKLES_MARK_BROOKS_VAR_ED_grande.jpg?v=1554880980',
+            'series' => 'Detective Comics #1000'
+        ],
+        [
+            'thumb' => 'https://cdn.shopify.com/s/files/1/1267/8217/products/BATMAN_50_DC_UNIVERSE_TOM_KING_BATMAN_CATWOMAN_WEDDING_ALTERNATE_JOELLE_JONES_GRANDE_2x3000x.jpg?v=1531108175',
+            'series' => 'Batman #50'
+        ],
+        [
+            'thumb' => 'https://cdn.shopify.com/s/files/1/1267/8217/products/WW750_Cover_B_Grayscale-001_grande.jpg?v=1582197251',
+            'series' => 'Wonder Woman #750'
+        ],
+        [
+            'thumb' => 'https://cdn.shopify.com/s/files/1/1267/8217/products/Flash750_Cover_B_Black-and-White-001_grande.jpg?v=1582197562',
+            'series' => 'The Flash #750'
+        ],
+        [
+            'thumb' => 'https://cdn.shopify.com/s/files/1/1267/8217/products/GL_80_Cover_A_grande.jpg?v=1592311224',
+            'series' => 'Green Lantern #80'
+        ]
+    ],
 ];
 
