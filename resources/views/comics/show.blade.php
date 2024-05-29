@@ -17,17 +17,13 @@
                 <p>Sale date: {{ $comic->sale_date }}</p>
                 <p>Type: {{ $comic->type }}</p>
                 <p>Series: {{ $comic->series }}</p>
-                <div class="link d-flex align-items-center justify-content-center">
+                <div class="link d-flex align-items-center justify-content-start">
                     <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="update-link p-4">
                         <i class="fa-solid fa-gear"></i>
                     </a>
-                    <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST" class="p-3 d-inline">
-                        @csrf
-                        @method('DELETE')
                         <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal">
                             <i class="fa-solid fa-trash"></i>
                         </button>
-                    </form>
                 </div>
             </div>
         </div>

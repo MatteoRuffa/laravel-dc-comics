@@ -71,9 +71,14 @@ main {
             border: none;
             background: none;
             padding: 0;
+            transition: transform 0.3s ease;
             i.fa-solid.fa-trash {
                 background: none;
             }
+        }
+
+        button.btn.btn-danger.btn-sm:hover {
+            transform: scale(1.5);
         }
 
         a {
@@ -82,18 +87,11 @@ main {
         i {
             font-size: 2rem;
         }
-        .d-inline{
-            transition: transform 0.3s ease;
-        }
-        
-        .d-inline:hover {
-            transform: scale(1.5);
-        }
 
         .update {
             transition: transform 0.3s ease;
         }
-        
+
         .update-link:hover {
             transform: scale(1.5);
         }

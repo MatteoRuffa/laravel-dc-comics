@@ -5,7 +5,7 @@
 @section('content')
 <main>
     <div class="container">
-        <h2 class="py-5 text-white">Create New Comic</h2>
+        <h2 class="py-5 text-white text-center">Create New Comic</h2>
         <form action="{{ route('comics.store') }}" method="POST" class="py-5">
             @csrf
             <div class="mb-3">
@@ -17,8 +17,12 @@
                 <textarea class="form-control" id="description" name="description" rows="3"></textarea>
             </div>
             <div class="mb-3">
-                <label for="thumb" class="form-label">Thumbnail URL</label>
-                <input type="text" class="form-control" id="thumb" name="thumb">
+                <label for="thumb" class="form-label">image</label>
+                <select class="form-control" id="thumb" name="thumb">
+                    @foreach($comics as $comic)
+                        <option value="{{ $comic->thumb }}">Immagine {{ $loop->iteration }}</option>
+                    @endforeach
+                </select>
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
