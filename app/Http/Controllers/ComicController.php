@@ -46,14 +46,15 @@ class ComicController extends Controller
 
     public function edit(Comic $comic)
     {
-        return view('comics.edit', array_merge($this->commonData, ['comic' => $comic]));
+        return view('comics.update', array_merge($this->commonData, ['comic' => $comic]));
     }
 
-    public function update(Request $request, Comic $comic)
+    public function update(StoreComicRequest $request, Comic $comic)
     {
-        $comic->update($request->all());
+        $form_data = $request->validated();
+        $comic->update($form_data);
 
-        return redirect()->route('comics.update', ['comic' => $comic->id])->with('success', 'Comic updated successfully');
+        return redirect()->route('comics.show', ['comic' => $comic->id])->with('success', 'Comic updated successfully');
     }
 
     public function destroy(Comic $comic)
