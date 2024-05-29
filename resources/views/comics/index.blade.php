@@ -15,10 +15,10 @@
                          onmouseout="this.querySelector('.price').style.display='none'">
                         <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
                         <div class="price ">
-                            <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="details-link">
+                            <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="details-link p-3">
                                 <i class="fas fa-info-circle"></i>
                             </a>
-                            <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="update-link">
+                            <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="update-link p-3">
                                 <i class="fas fa-pencil-alt"></i>
                             </a>
                         </div>
