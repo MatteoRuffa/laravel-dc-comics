@@ -20,11 +20,8 @@
                 <textarea class="form-control" id="description" name="description" rows="3">{{old('description')}}</textarea>
             </div>
             <div class="mb-3">
-                <label for="thumb" class="form-label @error('image') is-invalid @enderror" name="image"  value="{{old('image')}}">image</label>
+                <label for="thumb" class="form-label" name="image"  value="{{old('image')}}">image</label>
                 <select class="form-control" id="thumb" name="thumb">
-                    @foreach($comics as $comic)
-                        <option value="{{ $comic->thumb }}">Immagine {{ $loop->iteration }}</option>
-                    @endforeach
                 </select>
             </div>
             <div class="mb-3">
@@ -49,11 +46,8 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="type" class="form-label @error('price') is-invalid @enderror" name="type"  value="{{old('type')}}" required>Type</label>
+                <label for="type" class="form-label " name="type"  value="{{old('type')}}" required>Type</label>
                 <input type="text" class="form-control" id="type" name="type">
-                @error('type')
-                    <div class="alert alert-danger">{{ $message }}</div>
-                @enderror
             </div>
             <button type="submit" class="btn btn-primary">Create Comic</button>
         </form>

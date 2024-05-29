@@ -317,3 +317,12 @@ main {
     
 }
 
+#zoom {
+    width: 300px;  /* Larghezza dell'immagine ingrandita */
+    height: 300px;  /* Altezza dell'immagine ingrandita */
+    position: absolute;
+    border: 1px solid #000;
+    background-repeat: no-repeat;
+    pointer-events: none;  /* Permette al mouse di interagire con gli elementi sotto lo zoom */
+    display: none;  /* Nasconde lo zoom all'inizio */
+}
