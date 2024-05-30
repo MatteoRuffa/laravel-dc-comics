@@ -22,14 +22,17 @@
             <div class="mb-3">
                 <label for="thumb" class="form-label" name="image"  value="{{old('image')}}">image</label>
                 <select class="form-control" id="thumb" name="thumb">
+                    @foreach($comics as $comic)
+                        <option value="{{ $comic->thumb }}">Immagine {{ $loop->iteration }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="mb-3">
                 <label for="price" class="form-label">Price</label>
                 <input type="number" step="0.01" class="form-control @error('price') is-invalid @enderror" id="price" name="price"  value="{{old('image')}}" required>
                 @error('price')
-                <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
+                    <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
             <div class="mb-3">
                 <label for="series" class="form-label @error('Series') is-invalid @enderror" name="Series"  value="{{old('Series')}}" required>Series</label>
